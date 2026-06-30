@@ -1,9 +1,10 @@
 // Fonts
-@import url("https://fonts.bunny.net/css?family=Nunito");
+@import url("https://fonts.bunny.net/css?family=Segoe UI");
 
 // Variables
 @import "variables";
 
 // Bootstrap
 @import "bootstrap/scss/bootstrap";
+$bootstrap-icons-font-dir: "../../../node_modules/bootstrap-icons/font/fonts";
 @import "bootstrap-icons/font/bootstrap-icons";
