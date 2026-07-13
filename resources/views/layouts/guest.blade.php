@@ -84,7 +84,7 @@
     </nav>
 
     @if (session('success'))
-        <div class="toast fade show position-fixed bottom-0 end-0 mb-3 me-3" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast fade show position-fixed bottom-0 insert-e-0 mb-3 me-3" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <i class="bi bi-exclamation-triangle-fill text-success me-2"></i>
                 <strong class="text-success me-auto">Success</strong>
@@ -97,7 +97,7 @@
     @endif
 
     @if (session('error'))
-        <div class="toast fade show position-fixed bottom-0 end-0 mb-3 me-3" role="alert" aria-live="assertive" aria-atomic="true">
+        <div class="toast fade show position-fixed bottom-0 insert-e-0 mb-3 me-3" role="alert" aria-live="assertive" aria-atomic="true">
             <div class="toast-header">
                 <i class="bi bi-exclamation-triangle-fill text-danger me-2"></i>
                 <strong class="text-danger me-auto">Error</strong>
