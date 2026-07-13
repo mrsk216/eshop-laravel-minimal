@@ -8,3 +8,7 @@
 @import "bootstrap/scss/bootstrap";
 $bootstrap-icons-font-dir: "../../../node_modules/bootstrap-icons/font/fonts";
 @import "bootstrap-icons/font/bootstrap-icons";
+
+ul {
+    margin-bottom: 0;
+}
