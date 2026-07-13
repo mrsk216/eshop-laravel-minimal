@@ -74,7 +74,7 @@
         </aside>
 
         {{-- Main Content Wrapper --}}
-        <main class="main-wrapper">
+        <main class="main-wrapper content-scroll">
             {{-- Header --}}
             <header class="bg-write shadow-sm">
                 <div class="d-flex justify-content-between align-items-center px-4 py-3">
