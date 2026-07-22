@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
+use App\Models\Product;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -24,6 +26,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('admin.home');
+        $totalProduct = Product::count();
+        $popularProduct = Product::where('is_popular', true)->take(10)->get();
+        $totalCustomer = User::where('role', 'customer')->count();
+        return view('admin.home', compact('totalProduct', 'totalCustomer', 'popularProduct'));
     }
 }

@@ -8,7 +8,7 @@
         <div class="col-12">
             <div class="card shadow-sm">
                 <div class="card-body">
-                    <form action="{{ route('admin.product.create') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ route('admin.product.store') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         {{-- Name --}}
                         <div class="mb-3">

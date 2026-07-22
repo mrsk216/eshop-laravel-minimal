@@ -18,10 +18,7 @@
     <div id="top-header" class="bg-dark text-white py-2 small">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-md-3 text-center">
-                    {{-- Livewire currency --}}
-                </div>
-                <div class="col-md-6 text-center">
+                <div class="col-md-9">
                     <span class="marquee-text">
                         <i class="bi bi-truck"></i> Free Shipping on orders over $50!
                     </span>
@@ -72,12 +69,18 @@
                     </li>
                 </ul>
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="{{ url('login') }}">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bold" href="{{ url('register') }}">Register</a>
-                    </li>
+                    @if (auth()->check())
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="{{ url('admin/dashboard') }}">Dashboard</a>
+                        </li>
+                    @else
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="{{ url('login') }}">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link fw-bold" href="{{ url('register') }}">Register</a>
+                        </li>
+                    @endif
                 </ul>
             </div>
         </div>

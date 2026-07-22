@@ -39,7 +39,7 @@
                 <div class="card-body d-flex align-items-center justify-content-between">
                     <div>
                         <p class="text-muted small mb-1">Total Products</p>
-                        <p class="fs-3 fw-bold text-dark mb-0">0</p>
+                        <p class="fs-3 fw-bold text-dark mb-0">{{ $totalProduct }}</p>
                     </div>
                     <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height:50px;">
                         <i class="bi bi-box2 text-primary fs-5"></i>
@@ -53,7 +53,7 @@
                 <div class="card-body d-flex align-items-center justify-content-between">
                     <div>
                         <p class="text-muted small mb-1">Total Customers</p>
-                        <p class="fs-3 fw-bold text-dark mb-0">12</p>
+                        <p class="fs-3 fw-bold text-dark mb-0">{{ $totalCustomer }}</p>
                     </div>
                     <div class="bg-primary bg-opacity-10 rounded-circle p-3 d-flex align-items-center justify-content-center" style="width: 50px; height:50px;">
                         <i class="bi bi-people text-primary fs-5"></i>
@@ -124,13 +124,15 @@
                 <div class="card-body">
                     <h3 class="card-title fs-5 fw-semibold text-dark mb-4">Top Products</h3>
                     <div class="d-flex flex-column gap-3">
-                        <div class="d-flex align-items-center justify-content-between">
-                            <div class="d-flex align-items-center gap-3">
-                                <span class="text-muted fw-semibold">#1</span>
-                                <span class="text-dark">Iphone 15 Pro Max</span>
+                        @foreach ($popularProduct as $i => $product)
+                            <div class="d-flex align-items-center justify-content-between">
+                                <div class="d-flex align-items-center gap-3">
+                                    <span class="text-muted fw-semibold">#{{ $i + 1 }}</span>
+                                    <span class="text-dark">{{ $product->name }}</span>
+                                </div>
+                                <span class="text-secondary">10 sales</span>
                             </div>
-                            <span class="text-secondary">10 sales</span>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>

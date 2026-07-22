@@ -81,7 +81,7 @@
             @foreach ($categories as $category)
                 <div class="col-6 col-md-4 col-lg-2">
                     <div class="card">
-                        <img src="{{ $category['img'] }}" alt="{{ $category['name'] }}" class="img-fluid" style="height: 150px;">
+                        <img src="{{ $category['img'] ?? 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQpjqel3H2zTUa2vXb_-LfUZReMSv0aKEQA4xPRJQtJxA&s=10' }}" alt="{{ $category['name'] }}" class="img-fluid" style="height: 150px;">
                         <div class="card-body">
                             <h6 class="fw-bold mb-1">{{ $category['name'] }}</h6>
                         </div>
@@ -170,7 +170,7 @@
             <p class="text-muted">Discover everthing we have to offer</p>
         </div>
 
-        {{-- LiveWire --}}
+        @livewire('browse-product')
     </div>
 </section>
 @endsection
